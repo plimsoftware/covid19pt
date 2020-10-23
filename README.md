@@ -1,4 +1,4 @@
-# Projecto Clone Netflix
+# Projecto Dashboard Covid19 Portugal
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6a4c9b3-63e0-4714-8a4f-9a43cdf7f6b3/deploy-status)](https://app.netlify.com/sites/covid19portugal/deploys)
 
