@@ -1,4 +1,4 @@
-# Projecto Clone Netflix
+# Projecto Dashboard Covid19 Portugal
 
 Olá, este é o meu projecto de um dashboard sobre o dados diários do Covid19 em Portugal, que foi elaborado no decorrer do Curso para o Bootcamp React Web Developer.
 
