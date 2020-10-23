@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projecto Clone Netflix
+
+Olá, este é o meu projecto de um dashboard sobre o dados diários do Covid19 em Portugal, que foi elaborado no decorrer do Curso para o Bootcamp React Web Developer.
+
+Um abraço!
 
 ## Available Scripts
 

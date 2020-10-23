@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import RefreshIcon from '../../../assets/images/refresh.png'
+import flag from '../../../assets/images/portugal.png'
 import { Card, Button, Select, MenuItem } from '../../../components'
 import ZONES from '../../../commons/constants/zones'
 import { CardPanelContentStyled, ItemStyled, TypoStyled } from './style'
@@ -51,7 +52,7 @@ function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
     <Card>
       <CardPanelContentStyled>
         <div>
-          <TypoStyled variant="h5" component="span" color="primary">COVID19</TypoStyled>
+          <TypoStyled variant="h5" component="span" color="primary"><img src={flag} alt="Portugal" /> COVID19</TypoStyled>
           <TypoStyled variant="h6" component="span" color="primary">Informação diária</TypoStyled>
           <TypoStyled variant="body2" component="span" color="primary">Atualizado em: {updateAt}</TypoStyled>
           <div className="pt-2">
