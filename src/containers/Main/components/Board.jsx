@@ -1,11 +1,11 @@
 import React, { memo, useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { Grid, Skeleton } from '../../../components'
 import Card from './Card'
 
 function Board({ data, ars }) {
     const [confirmados, setConfirmados] = useState('');
-    const [confirmadosNovos, setConfirmadosNovos] = useState('');
+    //const [confirmadosNovos, setConfirmadosNovos] = useState('');
     const [recuperados, setRecuperados] = useState('');
     const [obitos, setObitos] = useState('');
     const [ativos, setAtivos] = useState('');
@@ -17,7 +17,7 @@ function Board({ data, ars }) {
   useEffect(() => {    
     if (ars === ' ') {
       setConfirmados(data.confirmados);
-      setConfirmadosNovos(data.confirmados_novos);
+      //setConfirmadosNovos(data.confirmados_novos);
       setRecuperados(data.recuperados);
       setObitos(data.obitos);
       setAtivos(data.ativos);
@@ -27,7 +27,7 @@ function Board({ data, ars }) {
 
     if (ars === '_arsnorte') {
       setConfirmados(data.confirmados_arsnorte);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_arsnorte);
       setObitos(data.obitos_arsnorte);
       setAtivos(data.ativos_arsnorte);
@@ -37,7 +37,7 @@ function Board({ data, ars }) {
 
     if (ars === '_arscentro') {
       setConfirmados(data.confirmados_arscentro);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_arscentro);
       setObitos(data.obitos_arscentro);
       setAtivos(data.ativos_arscentro);
@@ -47,7 +47,7 @@ function Board({ data, ars }) {
 
     if (ars === '_arslvt') {
       setConfirmados(data.confirmados_arslvt);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_arslvt);
       setObitos(data.obitos_arslvt);
       setAtivos(data.ativos_arslvt);
@@ -57,7 +57,7 @@ function Board({ data, ars }) {
 
     if (ars === '_arsalentejo') {
       setConfirmados(data.confirmados_arsalentejo);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_arsalentejo);
       setObitos(data.obitos_arsalentejo);
       setAtivos(data.ativos_arsalentejo);
@@ -67,7 +67,7 @@ function Board({ data, ars }) {
 
     if (ars === '_arsalgarve') {
       setConfirmados(data.confirmados_arsalgarve);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_arsalgarve);
       setObitos(data.obitos_arsalgarve);
       setAtivos(data.ativos_arsalgarve);
@@ -77,7 +77,7 @@ function Board({ data, ars }) {
 
     if (ars === '_acores') {
       setConfirmados(data.confirmados_acores);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_acores);
       setObitos(data.obitos_acores);
       setAtivos(data.ativos_acores);
@@ -87,7 +87,7 @@ function Board({ data, ars }) {
 
     if (ars === '_madeira') {
       setConfirmados(data.confirmados_madeira);
-      setConfirmadosNovos('');
+      //setConfirmadosNovos('');
       setRecuperados(data.recuperados_madeira);
       setObitos(data.obitos_madeira);
       setAtivos(data.ativos_madeira);

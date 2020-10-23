@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import RefreshIcon from '../../../assets/images/refresh.png'
+//import RefreshIcon from '../../../assets/images/refresh.png'
 import flag from '../../../assets/images/portugal.png'
 import { Card, Button, Select, MenuItem } from '../../../components'
 import ZONES from '../../../commons/constants/zones'
@@ -8,7 +8,7 @@ import { CardPanelContentStyled, ItemStyled, TypoStyled } from './style'
 const navigatorHasShare = navigator.share
 
 function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
-  const { cases, recovered, deaths, todayCases, todayDeaths } = data
+  const { confirmados } = data
 
   const renderArs = (ars, index) => (
     <MenuItem key={`ars-${index}`} value={ars.value}>
@@ -18,7 +18,7 @@ function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
     </MenuItem>
   )
 
-  const textCovid19 = `País: ${ars} - recuperados: ${recovered}`
+  const textCovid19 = `País: ${ars} - recuperados: ${confirmados}`
 
   const copyInfo = () => {
     navigator.clipboard.writeText(textCovid19)
