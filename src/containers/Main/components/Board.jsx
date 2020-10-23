@@ -106,8 +106,7 @@ function Board({ data, ars }) {
       {recuperados &&
       <Grid item xs={12} md={3}>
          <Card value={getValue(recuperados)} label="Total de Recuperados" color="#67C887" />
-      </Grid>
-      }
+      </Grid>}
       {obitos &&
       <Grid item xs={12} md={3}>
         <Card value={getValue(obitos)} label="Total de Óbitos" color="#000" />

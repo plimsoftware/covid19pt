@@ -8,7 +8,7 @@ import { CardPanelContentStyled, ItemStyled, TypoStyled } from './style'
 const navigatorHasShare = navigator.share
 
 function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
-  const { confirmados } = data
+  const { confirmados, obitos } = data
 
   const renderArs = (ars, index) => (
     <MenuItem key={`ars-${index}`} value={ars.value}>
@@ -18,7 +18,7 @@ function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
     </MenuItem>
   )
 
-  const textCovid19 = `País: ${ars} - recuperados: ${confirmados}`
+  const textCovid19 = `ARS: ${ars} - confirmados: ${confirmados}, óbitos: ${obitos}`
 
   const copyInfo = () => {
     navigator.clipboard.writeText(textCovid19)
@@ -28,7 +28,7 @@ function Panel({ updateAt, onChange, data, ars, getCoviddata }) {
     navigator.share({
       title: `Dados do Covid19 - ${ars}`,
       text: textCovid19,
-      url: 'https://covid19dio.netlify.app/'
+      url: 'https://covid19portugal.netlify.app/'
     })
   }
 
