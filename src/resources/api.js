@@ -1,4 +1,4 @@
-const path = 'https://covid19-api.vost.pt/Requests/get_last_update'
+const path = 'https://disease.sh/v3/covid-19/countries/'
 
 const headers = {
   method: 'get',
@@ -6,8 +6,8 @@ const headers = {
   cache: 'default'
 }
 
-function getData() {
-  return fetch(path, headers)
+function getData(ars) {
+  return fetch(path + ars + '?strict=true', headers)
     .then((response) => response.json())
 }
 

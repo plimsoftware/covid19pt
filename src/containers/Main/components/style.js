@@ -10,9 +10,19 @@ export const ValueStyled = styled(Typography)`
   font-weight: 400;
   font-size: 2.5rem;
 `
+export const ValueStyled1 = styled(Typography)`
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: green;
+`
 
 export const TypoStyled = styled(Typography)`
   margin-left: 10px;
+
+  img {
+    width: 100px;
+    border-radius: 30%;
+  }
 `
 
 export const CardContentStyled = styled(CardContent)`

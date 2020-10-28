@@ -5,17 +5,26 @@ import Panel from './components/Panel'
 import { ContainerStyled } from './style'
 
 function Main() {
-  const [data, setData] = useState({})
-  const [ars, setArs] = useState(' ')
+  const [data, setData] = useState({});
+  const [ars, setArs] = useState('portugal');
+  const [update, setUpdate] = useState('');
+  const [flag, setFlag] = useState('');
 
-  const getCovidData = useCallback(() => {
-    Api.getData()
-      .then(data => setData(data))
+  const getCovidData = useCallback((ars) => {
+    Api.getData(ars)
+      .then(data => {
+        setData(data);
+        let myDate = new Date( data.updated);
+        setUpdate(myDate.toLocaleString());
+        setFlag(data.countryInfo.flag);
+      })
+
+      
   }, [])
 
   useEffect(() => {    
-    getCovidData()
-  }, [getCovidData])
+    getCovidData(ars)
+  }, [getCovidData, ars])
 
   const handleChange = ({ target }) => {
     const ars = target.value
@@ -27,8 +36,9 @@ function Main() {
       <div className="mb-2">
         <Panel
           data={data}
-          updateAt={data.data_dados}
+          updateAt={update}
           onChange={handleChange}
+          flag={flag}
           ars={ars}
           getCovidData={getCovidData}
         />

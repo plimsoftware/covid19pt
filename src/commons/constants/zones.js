@@ -1,35 +1,47 @@
 const ZONES = [
   {
     label: 'Portugal',
-    value: ' ',
+    value: 'portugal',
   },
   {
-    label: 'ARS Norte',
-    value: '_arsnorte',
+    label: 'Espanha',
+    value: 'spain',
   },
   {
-    label: 'ARS Centro',
-    value: '_arscentro',
+    label: 'Brasil',
+    value: 'brazil',
   },
   {
-    label: 'ARS Lisboa e Vale do Tejo',
-    value: '_arslvt',
+    label: 'EUA',
+    value: 'us',
   },
   {
-    label: 'ARS Alentejo',
-    value: '_arsalentejo',
+    label: 'França',
+    value: 'france',
   },
   {
-    label: 'ARS Algarve',
-    value: '_arsalgarve',
+    label: 'Canadá',
+    value: 'canada',
   },
   {
-    label: 'Açores',
-    value: '_acores',
+    label: 'Angola',
+    value: 'angola',
   },
   {
-    label: 'Madeira',
-    value: '_madeira',
+    label: 'Itália',
+    value: 'italy',
+  },
+  {
+    label: 'China',
+    value: 'china',
+  },
+  {
+    label: 'Alemanha',
+    value: 'germany',
+  },
+  {
+    label: 'Inglaterra',
+    value: 'england',
   }
 ]
 
