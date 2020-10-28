@@ -2,7 +2,7 @@ import React, { memo, useState, useCallback, useEffect } from 'react'
 import Api from '../../resources/api'
 import Board from './components/Board'
 import Panel from './components/Panel'
-import { ContainerStyled } from './style'
+import { ContainerStyled, Footer } from './style'
 
 function Main() {
   const [data, setData] = useState({});
@@ -10,12 +10,16 @@ function Main() {
   const [update, setUpdate] = useState('');
   const [flag, setFlag] = useState('');
 
+  function zeroEsquerda(num) {
+    return num >= 10 ? num : `0${num}`
+  }
+  
   const getCovidData = useCallback((ars) => {
     Api.getData(ars)
       .then(data => {
         setData(data);
-        let myDate = new Date( data.updated);
-        setUpdate(myDate.toLocaleString());
+        let myDate = new Date(data.updated);
+        setUpdate(`${zeroEsquerda(myDate.getDate())}/${zeroEsquerda(myDate.getMonth() +1 )}/${myDate.getFullYear()}  ${zeroEsquerda(myDate.getHours() +1 )}:${zeroEsquerda(myDate.getMinutes())}:${zeroEsquerda(myDate.getSeconds())} `);
         setFlag(data.countryInfo.flag);
       })
 
@@ -44,6 +48,8 @@ function Main() {
         />
       </div>
       <Board data={data} ars={ars} />
+      <Footer>
+        <span>Produzido por: Luís Fernandes 2020<a href="https://www.plimsoftware.pt">www.plimsoftware.pt</a></span></Footer>
     </ContainerStyled>
   )
 }
