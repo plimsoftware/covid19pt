@@ -19,7 +19,7 @@ function Main() {
       .then(data => {
         setData(data);
         let myDate = new Date(data.updated);
-        setUpdate(`${zeroEsquerda(myDate.getDate())}/${zeroEsquerda(myDate.getMonth() +1 )}/${myDate.getFullYear()}  ${zeroEsquerda(myDate.getHours() +1 )}:${zeroEsquerda(myDate.getMinutes())}:${zeroEsquerda(myDate.getSeconds())} `);
+        setUpdate(`${zeroEsquerda(myDate.getDate())}/${zeroEsquerda(myDate.getMonth() +1 )}/${myDate.getFullYear()}  ${zeroEsquerda(myDate.getHours())}:${zeroEsquerda(myDate.getMinutes())}:${zeroEsquerda(myDate.getSeconds())} `);
         setFlag(data.countryInfo.flag);
       })
 
@@ -49,7 +49,8 @@ function Main() {
       </div>
       <Board data={data} ars={ars} />
       <Footer>
-        <span>Produzido por: Luís Fernandes 2020<a href="https://www.plimsoftware.pt">www.plimsoftware.pt</a></span></Footer>
+        <span>Produzido por: Luís Fernandes 2020<a href="https://www.plimsoftware.pt">www.plimsoftware.pt</a></span>
+      </Footer>
     </ContainerStyled>
   )
 }
