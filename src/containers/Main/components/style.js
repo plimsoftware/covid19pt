@@ -35,6 +35,11 @@ export const CardPanelContentStyled = styled(CardContent)`
   justify-content: space-between;
   padding: 25px;
   background: #d5e1f5;
+
+  #refresh {
+    width: 10px;
+    cursor: pointer;
+  }
 `
 
 export const ItemStyled = styled.div`

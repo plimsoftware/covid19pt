@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-//import RefreshIcon from '../../../assets/images/refresh.png'
+import RefreshIcon from '../../../assets/images/refresh.png'
 import flagTemp from '../../../assets/images/portugal.png'
 import { Card, Button, Select, MenuItem } from '../../../components'
 import ZONES from '../../../commons/constants/zones'
@@ -7,7 +7,7 @@ import { CardPanelContentStyled, ItemStyled, TypoStyled } from './style'
 
 const navigatorHasShare = navigator.share
 
-function Panel({ updateAt, onChange, data, ars, flag, getCoviddata }) {
+function Panel({ updateAt, onChange, data, ars, flag, getCovidData }) {
   const { todayRecovered, todayCases, todayDeaths } = data;
 
   const renderArs = (ars, index) => (
@@ -55,6 +55,7 @@ function Panel({ updateAt, onChange, data, ars, flag, getCoviddata }) {
           <TypoStyled variant="h5" component="span" color="primary"><img src={flag ? flag : flagTemp} alt="Portugal" /> COVID19</TypoStyled>
           <TypoStyled variant="h6" component="span" color="primary">Informação diária</TypoStyled>
           <TypoStyled variant="body2" component="span" color="primary">Atualizado em: {updateAt ? updateAt : 0}</TypoStyled>
+          <img src={RefreshIcon} id="refresh" alt="Refresh" onClick={getCovidData}/>
           <div className="pt-2">
             <Select onChange={onChange} value={ars}>
               {ZONES.map(renderArs)}

@@ -17,6 +17,7 @@ function Main() {
   const getCovidData = useCallback((ars) => {
     Api.getData(ars)
       .then(data => {
+        console.log('fui buscar data');
         setData(data);
         let myDate = new Date(data.updated);
         setUpdate(`${zeroEsquerda(myDate.getDate())}/${zeroEsquerda(myDate.getMonth() +1 )}/${myDate.getFullYear()}  ${zeroEsquerda(myDate.getHours())}:${zeroEsquerda(myDate.getMinutes())}:${zeroEsquerda(myDate.getSeconds())} `);
@@ -44,7 +45,7 @@ function Main() {
           onChange={handleChange}
           flag={flag}
           ars={ars}
-          getCovidData={getCovidData}
+          getCovidData={() => getCovidData(ars)}
         />
       </div>
       <Board data={data} ars={ars} />
