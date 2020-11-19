@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6a4c9b3-63e0-4714-8a4f-9a43cdf7f6b3/deploy-status)](https://app.netlify.com/sites/covid19portugal/deploys)
 
-Olá, este é o meu projecto de um dashboard sobre o dados diários do Covid19 em Portugal, que foi elaborado no decorrer do Curso para o Bootcamp React Web Developer.
+Olá, este é o meu projecto de um dashboard sobre o dados diários do Covid19 em Portugal, elaborado com React e com funcionalidades PWA.
 
 Um abraço!
 
